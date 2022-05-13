@@ -34,7 +34,14 @@ $body_contents = $db_slave->query('SELECT titlesite, description, bodyhtml, keyw
 $news_contents = array_merge($news_contents, $body_contents);
 unset($body_contents);
 
+$news_contents['audio_empty'] = '';
+if($news_contents['audio'] == ''){
+    $news_contents['audio_empty'] = 'rp-empty-video';
+}
+
 $news_contents['audio'] = NV_BASE_SITEURL.NV_UPLOADS_DIR .'/' . $module_upload . '/audio/' . $news_contents['audio'];
+
+
 // Tải về đính kèm
 if ($nv_Request->isset_request('download', 'get')) {
     $fileid = $nv_Request->get_int('id', 'get', 0);

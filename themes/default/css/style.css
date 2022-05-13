@@ -2455,3 +2455,7 @@ button.close {
 div#audio_detail {
     margin-bottom: 5px;
 }
+.rp-empty-video{
+    display:none;
+}
+

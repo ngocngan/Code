@@ -58,7 +58,7 @@
         <!-- BEGIN: showhometext -->
         
         <div id="audio_detail">
-            <audio controls class="rp-audio">
+            <audio controls class="rp-audio {DETAIL.audio_empty}">
               <source  src="{DETAIL.audio}" type="audio/ogg">
             </audio>
         </div>
